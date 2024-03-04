@@ -25,7 +25,7 @@ final class MainDataProvider: NSObject, UITableViewDelegate, UITableViewDataSour
             tableView.reloadData()
         }
     }
-    
+
     //MARK: - Data Source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count

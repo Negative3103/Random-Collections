@@ -17,7 +17,7 @@ final class RandomCollectionViewCell: CustomCollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         containerView.layer.cornerRadius = 10
-        containerView.layer.borderWidth = 1
+        containerView.layer.borderWidth = 2
         containerView.layer.borderColor = UIColor.appColor(.grey).cgColor
     }
 }

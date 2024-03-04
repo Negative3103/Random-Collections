@@ -71,7 +71,10 @@ extension MainViewController {
             let indexPath = IndexPath(row: i, section: 0)
             if let cell = view().tableView.cellForRow(at: indexPath) as? RandomTableViewCell {
                 let randomIndex = Int.random(in: 0..<data[i].count)
-                cell.randomContainerView.dataProvider.items[randomIndex] = Int.random(in: 1...100)
+                guard let randomCell = cell.randomContainerView.collectionView.cellForItem(at: IndexPath(row: randomIndex, section: 0)) as? RandomCollectionViewCell else { return }
+                let newNumber = Int.random(in: 1...100)
+                randomCell.numberLabel.text = "\(newNumber)"
+                data[i][randomIndex] = newNumber
             }
         }
     }
