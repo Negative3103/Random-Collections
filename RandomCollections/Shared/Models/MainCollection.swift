@@ -1,5 +1,5 @@
 //
-//  AssetsColor.swift
+//  MainCollection.swift
 //  RandomCollections
 //
 //  Created by Хасан Давронбеков on 04/03/24.
@@ -7,8 +7,7 @@
 
 import UIKit
 
-enum AssetsColor: String {
-    case main
-    case white
-    case grey
+struct MainCollection {
+    var sections: Int
+    var items: [Int]
 }
